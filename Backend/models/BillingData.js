@@ -1,0 +1,149 @@
+const mongoose = require("mongoose");
+
+const initalBillingOnlinePatientSchema = new mongoose.Schema({
+    patientId:{
+        type:String,
+        required:true,
+    },
+    doctorId:{
+        type:String,
+        required:true,
+    },
+    appointmentId:{
+        type:String,
+        required:true,
+    },
+    serviceorTreatment:{
+        type:String,
+        required:true,
+    },
+    durationOfService:{
+        type:String,
+        required:true,
+    },
+    costOfService:{
+        type:String,
+        required:true,
+    },
+    discount:{
+        type:String,
+        required:true,
+    },
+    totalAmount:{
+        type:String,
+        required:true,
+    },
+    paymentMethod:{
+        type:String,
+        required:true,
+    },
+    billingNotes:{
+        type:String,
+        required:true,
+    },    
+},{timestamps:true});
+
+const InitalBillingOnlinePatient = mongoose.model("initalBillingOnlinePatientSchema",initalBillingOnlinePatientSchema);
+
+const completeBillingSchemaofOnlinePatient = new mongoose.Schema({
+    patientId:{
+        type:String,
+        required:true,
+    },
+    doctorId:{
+        type:String,
+        required:true,
+    },
+    appointmentId:{
+        type:String,
+        required:true,
+    },
+    doctorName:{
+        type:String,
+        required:true,
+    },
+    doctorOtherInformation:{
+        type:String,
+        required:true,
+    },
+    dateOfAppointment:{
+        type:String,
+        required:true,
+    },
+    timeOfAppointment:{
+        type:String,
+        required:true,
+    },
+    typeOfAppointment:{
+        type:String,
+        required:true,
+    },
+    reasonOfAppointment:{
+        type:String,
+        required:true,
+    },
+    locationOfAppointment:{
+        type:String,
+        required:true,
+    },
+    durationOfAppointment:{
+        type:String,
+        required:true,
+    },
+    doctorPhone:{
+        type:String,
+        required:true,
+    },
+    patientFullName:{
+        type:String,
+        required:true,
+    },
+    patientPhone:{
+        type:String,
+        required:true,
+    },
+    patientDOB:{
+        type:String,
+        required:true,
+    },
+    patientGender:{
+        type:String,
+        required:true,
+    },
+    serviceorTreatment:{
+        type:String,
+        required:true,
+    },
+    durationOfService:{
+        type:String,
+        required:true,
+    },
+    costOfService:{
+        type:String,
+        required:true,
+    },
+    discount:{
+        type:String,
+        required:true,
+    },
+    totalAmount:{
+        type:String,
+        required:true,
+    },
+    paymentMethod:{
+        type:String,
+        required:true,
+    },
+    billingNotes:{
+        type:String,
+        required:true,
+    },
+
+},{timestamps:true})
+
+const CompleteBillingofOnlinePatient = mongoose.model("completeBillingSchemaofOnlinePatient",completeBillingSchemaofOnlinePatient);
+
+module.exports={
+    InitalBillingOnlinePatient,
+    CompleteBillingofOnlinePatient,
+}
